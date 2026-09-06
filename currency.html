@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JapaneseTourist || Currency Converter</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/currency.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link rel="icon" type="image/x-icon" href="css/icon.png" />
+  </head>
+  <body>
+    <nav>
+      <a class="brand" href="index.html">JapaneseTourist</a>
+      <a class="btn1" href="food.html" id="foodRcm">Food Recommendations</a>
+      <a class="btn1" href="currency.html" id="currencyBtn"
+        >Currency Converter</a
+      >
+      <a class="btn1" href="culture.html" id="cultureBtn">Japanese Culture</a>
+      <a class="btn1" href="weather.html" id="weatherBtn">Weather</a>
+
+      <label class="language-picker" for="language-select">
+        <span class="sr-only">Chọn ngôn ngữ</span>
+        <select id="language-select" aria-label="Chọn ngôn ngữ">
+          <option value="vi">VI</option>
+          <option value="ja">JP</option>
+          <option value="en">EN</option>
+        </select>
+      </label>
+
+      <div class="user-menu">
+        <div class="user" id="currentUser">User</div>
+
+        <button id="logoutBtn" style="display: none">Đăng xuất</button>
+      </div>
+    </nav>
+    <!-- đổi tiền tệ -->
+    <section class="currency-box">
+      <input type="number" id="amount" value="1000" />
+
+      <select id="from">
+        <option value="JPY">JPY</option>
+        <option value="VND">VND</option>
+        <option value="USD">USD</option>
+      </select>
+
+      <select id="to">
+        <option value="VND">VND</option>
+        <option value="JPY">JPY</option>
+        <option value="USD">USD</option>
+      </select>
+
+      <button onclick="convertCurrency()">Convert</button>
+
+      <p id="result">
+        Please enter an amount and select currencies to convert.
+      </p>
+    </section>
+    <section class="chart-section">
+      <h2>JPY/VND Live Chart</h2>
+
+      <div class="tradingview-widget-container">
+        <div id="tradingview_chart"></div>
+
+        <script
+          type="text/javascript"
+          src="https://s3.tradingview.com/tv.js"
+        ></script>
+
+        <script>
+          new TradingView.widget({
+            container_id: "tradingview_chart",
+            autosize: true,
+            symbol: "FX_IDC:JPYVND",
+            interval: "D",
+            timezone: "Asia/Ho_Chi_Minh",
+            theme: "light",
+            style: "1",
+            locale: "en",
+            allow_symbol_change: false,
+          });
+        </script>
+      </div>
+    </section>
+    <footer class="footer">
+      <p>&copy; 2023 JapaneseTourist. All rights reserved.</p>
+      <div class="footer-icons">
+        <!-- Facebook -->
+        <a href="https://www.facebook.com/vinh.nguyen.337736/" target="_blank">
+          <i class="fa-brands fa-facebook"></i>
+        </a>
+        <!-- TikTok -->
+        <a href="https://www.tiktok.com/@lowkey.boy607" target="_blank">
+          <i class="fa-brands fa-tiktok"></i>
+        </a>
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/nguyenvinh.pb" target="_blank">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+      </div>
+    </footer>
+
+    <script src="js/config.js"></script>
+    <script src="js/currency.js"></script>
+    <script>
+      // Chatbase integration
+      (function () {
+        if (!window.chatbase || window.chatbase("getState") !== "initialized") {
+          window.chatbase = (...args) => {
+            if (!window.chatbase.q) {
+              window.chatbase.q = [];
+            }
+            window.chatbase.q.push(args);
+          };
+          window.chatbase = new Proxy(window.chatbase, {
+            get(target, prop) {
+              if (prop === "q") {
+                return target.q;
+              }
+              return (...args) => target(prop, ...args);
+            },
+          });
+        }
+        const onLoad = function () {
+          const script = document.createElement("script");
+          script.src = "https://www.chatbase.co/embed.min.js";
+          script.id = "hIOf2tFVbfiV8sf3uTkmO";
+          script.domain = "www.chatbase.co";
+          document.body.appendChild(script);
+        };
+        if (document.readyState === "complete") {
+          onLoad();
+        } else {
+          window.addEventListener("load", onLoad);
+        }
+      })();
+    </script>
+  </body>
+</html>

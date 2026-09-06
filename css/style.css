@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Noto+Serif+JP:wght@600;700&display=swap');
+
+:root {
+  --vermillion: #bc2f2f;
+  --vermillion-dark: #922323;
+  --background: #f5efe5;
+  --surface: #fffdf8;
+  --surface-light: #faf4e9;
+  --text: #241f1c;
+  --muted: #746b63;
+  --line: #dfd3c3;
+  
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  scroll-padding-top: 90px;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  zoom: 100%;
+  margin: 0;
+  display: block;
+  padding: 72px 0 0;
+  font-family: 'Noto Serif JP', serif;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: -20px;
+  z-index: -1;
+  background: url("background3.jpg") center / 100% 100% no-repeat;
+  filter: blur(2px) brightness(0.6);
+
+}
+
+
+
+nav {
+  position: fixed;
+  z-index: 4;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 104px;
+  border-bottom: 1px solid var(--line);
+  background: rgba(255, 253, 248, 0.94);
+  box-shadow: 0 3px 18px rgba(87, 59, 39, 0.06);
+  zoom:90%;
+}
+
+nav .brand {
+  margin: 0 auto 0 0;
+  color: var(--vermillion);
+  font-family: 'Noto Serif JP', serif;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 2px;
+    margin-right: auto;
+  text-decoration: none;
+}
+
+nav .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 38px;
+  padding: 0 16px;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  cursor: pointer;
+  background: transparent;
+  color: var(--text);
+  font: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+nav .btn:last-child, nav .btn:hover {
+  border-color: var(--vermillion);
+  background: var(--vermillion);
+  color: #fff;
+}
+
+nav .btn1 {
+  position: relative;
+
+  text-decoration: none;
+  color: var(--text);
+
+  font-size: 14px;
+  font-weight: 500;
+
+  padding: 8px 12px;
+
+  transition: 0.3s;
+}
+
+nav .btn1:hover {
+  color: var(--vermillion);
+}
+
+nav .btn1::after {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  bottom: -6px;
+
+  width: 0;
+  height: 2px;
+
+  background: var(--vermillion);
+
+  transform: translateX(-50%);
+
+  transition: 0.3s;
+}
+
+nav .btn1:hover::after {
+  width: 70%;
+}
+
+.language-picker select {
+  min-height: 38px;
+  padding: 0 8px;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  outline: none;
+  cursor: pointer;
+  background: var(--surface);
+  color: var(--vermillion);
+  font: inherit;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.language-picker select:focus {
+  border-color: var(--vermillion);
+  box-shadow: 0 0 0 3px rgba(188, 47, 47, 0.14);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.footer {
+  padding: 12px 0;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100px;
+  background-color: var(--surface);
+  color: var(--vermillion);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 12px;
+ box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.12);
+  z-index: 3;
+}
+
+.footer a {
+  color: var(--light-vermillion);
+  text-decoration: none;
+  transition: color 160ms ease;
+  display:flex
+}
+
+.footer-icons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+
+}
+
+/* Nút logout bên cạnh user */
+.user-menu {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+
+#logoutBtn:last-child{
+  border-color: var(--vermillion);
+  background: var(--vermillion);
+  color: #fff;
+}
+
+#logoutBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 38px;
+  padding: 0 16px;
+  border: 1px solid var(--vermillion);
+  border-radius: 7px;
+  cursor: pointer;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 90px;
+  height: 40px;
+
+  padding: 0 16px;
+
+  border: 1px solid var(--line);
+  border-radius: 8px;
+
+  background: var(--surface);
+  color: var(--text);
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.user:hover {
+  border-color: var(--vermillion);
+  color: var(--vermillion);
+
+  transform: translateY(-2px);
+}
+
+.user:active {
+  transform: translateY(0);
+}

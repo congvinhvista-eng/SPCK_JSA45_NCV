@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JapaneseTourist || Sign Up</title>
+    <link rel="stylesheet" href="css/register.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link rel="icon" type="image/x-icon" href="css/icon.png" />
+  </head>
+  <body>
+    <nav>
+      <a class="brand" href="index.html">JapaneseTourist</a>
+      <label class="language-picker" for="language-select">
+        <span class="sr-only">Chọn ngôn ngữ</span>
+        <select id="language-select" aria-label="Chọn ngôn ngữ">
+          <option value="vi">VI</option>
+          <option value="ja">JP</option>
+          <option value="en">EN</option>
+        </select>
+      </label>
+      <a class="btn" href="index.html" data-translate="TrangChu">Trang Chủ</a>
+    </nav>
+    <div class="register-box">
+      <h2 data-translate="dangKy">Đăng Ký</h2>
+      <p class="description" data-translate="moTaDangKy">
+        Bắt đầu hành trình khám phá Nhật Bản
+      </p>
+
+      <form>
+        <div class="input-group">
+          <label for="username" data-translate="tenDangNhap"
+            >Tên đăng nhập</label
+          >
+          <input
+            type="text"
+            id="username"
+            placeholder="Ví dụ: nguyenvana"
+            data-translate-placeholder="viDuTenDangNhap"
+            required
+          />
+        </div>
+
+        <div class="input-group">
+          <label for="password" data-translate="matKhau">Mật khẩu</label>
+          <input
+            type="password"
+            id="password"
+            placeholder="Nhập ít nhất 6 ký tự"
+            data-translate-placeholder="nhapMatKhau"
+            required
+          />
+        </div>
+
+        <button type="submit" class="btn-register" data-translate="taoTaiKhoan">
+          Tạo tài khoản
+        </button>
+      </form>
+
+      <a
+        class="auth-switch-btn"
+        href="login.html"
+        data-translate="daCoTaiKhoan"
+      >
+        Đã có tài khoản? Đăng nhập
+      </a>
+    </div>
+    <section class="hero">
+      <div class="hero-overlay"></div>
+
+      <div class="container hero-content">
+        <h1 data-translate="khamPhaNhatBan">JapaneseTourist</h1>
+
+        <h2 data-translate="gioiThieu">Discover Japan With Ease</h2>
+
+        <p data-translate="moTa">
+          JapaneseTourist là website hỗ trợ du khách khám phá Nhật Bản một cách
+          dễ dàng và thuận tiện hơn. Website cung cấp bản đồ tương tác, thông
+          tin địa điểm du lịch, thời tiết, ẩm thực địa phương và nhiều công cụ
+          hữu ích giúp người dùng lên kế hoạch cho chuyến đi một cách hiệu quả.
+        </p>
+
+        <div class="hero-features">
+          <span>🗺️ Maps</span>
+          <span>🌤️ Weather</span>
+          <span>🍣 Food</span>
+          <span>💴 Currency</span>
+          <span>🌐 Translate</span>
+        </div>
+      </div>
+    </section>
+  </body>
+  <footer class="footer">
+    <p>&copy; 2023 JapaneseTourist. All rights reserved.</p>
+    <div class="footer-icons">
+      <!-- Facebook -->
+      <a href="https://www.facebook.com/vinh.nguyen.337736/" target="_blank">
+        <i class="fa-brands fa-facebook"></i>
+      </a>
+      <!-- TikTok -->
+      <a href="https://www.tiktok.com/@lowkey.boy607" target="_blank">
+        <i class="fa-brands fa-tiktok"></i>
+      </a>
+      <!-- Instagram -->
+      <a href="https://www.instagram.com/nguyenvinh.pb" target="_blank">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+    </div>
+  </footer>
+  <script src="js/index.js" defer></script>
+  <script src="js/register.js" defer></script>
+  <script>
+    // Chatbase integration
+    (function () {
+      if (!window.chatbase || window.chatbase("getState") !== "initialized") {
+        window.chatbase = (...args) => {
+          if (!window.chatbase.q) {
+            window.chatbase.q = [];
+          }
+          window.chatbase.q.push(args);
+        };
+        window.chatbase = new Proxy(window.chatbase, {
+          get(target, prop) {
+            if (prop === "q") {
+              return target.q;
+            }
+            return (...args) => target(prop, ...args);
+          },
+        });
+      }
+      const onLoad = function () {
+        const script = document.createElement("script");
+        script.src = "https://www.chatbase.co/embed.min.js";
+        script.id = "hIOf2tFVbfiV8sf3uTkmO";
+        script.domain = "www.chatbase.co";
+        document.body.appendChild(script);
+      };
+      if (document.readyState === "complete") {
+        onLoad();
+      } else {
+        window.addEventListener("load", onLoad);
+      }
+    })();
+  </script>
+</html>

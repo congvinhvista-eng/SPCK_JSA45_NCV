@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JapaneseTourist || Home</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link rel="icon" type="image/x-icon" href="css/icon.png" />
+  </head>
+  <body>
+    <nav>
+      <a class="brand" href="index.html">JapaneseTourist</a>
+      <a class="btn1" href="food.html" id="foodRcm">Food Recommendations</a>
+      <a class="btn1" href="currency.html" id="currencyBtn"
+        >Currency Converter</a
+      >
+      <a class="btn1" href="culture.html" id="cultureBtn">Japanese Culture</a>
+      <a class="btn1" href="weather.html" id="weatherBtn">Weather</a>
+
+      <label class="language-picker" for="language-select">
+        <span class="sr-only">Chọn ngôn ngữ</span>
+        <select id="language-select" aria-label="Chọn ngôn ngữ">
+          <option value="vi">VI</option>
+          <option value="ja">JP</option>
+          <option value="en">EN</option>
+        </select>
+      </label>
+      <div class="user-menu">
+        <div class="user" id="currentUser">User</div>
+
+        <button id="logoutBtn" style="display: none">Đăng xuất</button>
+      </div>
+    </nav>
+    <section class="hero">
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content">
+        <span class="hero-tag">🇯🇵 JapaneseTourist</span>
+
+        <h1 data-translate="heroTitle">Explore The Beauty Of Japan</h1>
+
+        <p data-translate="heroDesc">
+          Khám phá những điểm đến tuyệt vời, ẩm thực hấp dẫn, văn hóa độc đáo và
+          những chuyến phiêu lưu khó quên.
+        </p>
+
+        <div class="hero-buttons">
+          <a
+            href="#destinations"
+            class="btn-primary"
+            data-translate="startExplore"
+          >
+            Bắt đầu khám phá
+          </a>
+
+          <a href="#map" class="btn-secondary" data-translate="map">Bản Đồ</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="container list">
+      <h1 data-translate="khamPhaNhatBan">JapaneseTourist</h1>
+
+      <h2 data-translate="exploreEasy">Exploring Japan easy</h2>
+
+      <p data-translate="moTa">
+        JapaneseTourist is a website that helps travelers explore Japan more
+        easily and conveniently. The website provides interactive maps,
+        information about tourist destinations, weather, local cuisine, and many
+        useful tools to help users plan their trips effectively.
+      </p>
+
+      <div class="list-features">
+        <span>🗺️ Maps</span>
+        <span>🌤️ Weather</span>
+        <span>🍣 Food</span>
+        <span>💴 Currency</span>
+        <span>🌐 Translate</span>
+        <span>🎌 Japanese Culture</span>
+      </div>
+    </div>
+    <section class="japan-showcase">
+      <div class="showcase-overlay">
+        <span class="japan-word">日本</span>
+        <p class="japan" data-translate="japanStory">
+          One Country. Infinite Stories.
+        </p>
+      </div>
+
+      <video id="japanVideo" autoplay muted loop playsinline>
+        <source src="css/japan.mp4" type="video/mp4" />
+      </video>
+    </section>
+
+    <section id="map">
+      <div class="map-card">
+        <h2 data-translate="mapTitle">Explore Japan On The Map</h2>
+        <p class="map-subtitle" data-translate="mapDesc">
+          Discover famous destinations, cultural landmarks and hidden gems
+          across Japan.
+        </p>
+        <div id="leaflet-map"></div>
+      </div>
+    </section>
+    <footer class="footer">
+      <p>&copy; 2023 JapaneseTourist. All rights reserved.</p>
+      <div class="footer-icons">
+        <!-- Facebook -->
+        <a href="https://www.facebook.com/vinh.nguyen.337736/" target="_blank">
+          <i class="fa-brands fa-facebook"></i>
+        </a>
+        <!-- TikTok -->
+        <a href="https://www.tiktok.com/@lowkey.boy607" target="_blank">
+          <i class="fa-brands fa-tiktok"></i>
+        </a>
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/nguyenvinh.pb" target="_blank">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/index.js" defer></script>
+    <script src="js/nav-main.js" defer></script>
+    <script>
+      // Chatbase integration
+      (function () {
+        if (!window.chatbase || window.chatbase("getState") !== "initialized") {
+          window.chatbase = (...args) => {
+            if (!window.chatbase.q) {
+              window.chatbase.q = [];
+            }
+            window.chatbase.q.push(args);
+          };
+          window.chatbase = new Proxy(window.chatbase, {
+            get(target, prop) {
+              if (prop === "q") {
+                return target.q;
+              }
+              return (...args) => target(prop, ...args);
+            },
+          });
+        }
+        const onLoad = function () {
+          const script = document.createElement("script");
+          script.src = "https://www.chatbase.co/embed.min.js";
+          script.id = "hIOf2tFVbfiV8sf3uTkmO";
+          script.domain = "www.chatbase.co";
+          document.body.appendChild(script);
+        };
+        if (document.readyState === "complete") {
+          onLoad();
+        } else {
+          window.addEventListener("load", onLoad);
+        }
+      })();
+    </script>
+  </body>
+</html>
