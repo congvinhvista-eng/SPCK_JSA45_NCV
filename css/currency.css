@@ -62,7 +62,7 @@
 
 .currency-box button:hover {
   transform: translateY(-2px);
-  background: #ff5a36;
+  background: var(--vermillion);
 }
 
 .currency-box button:active {
