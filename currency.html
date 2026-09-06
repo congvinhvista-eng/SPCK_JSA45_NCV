@@ -19,12 +19,30 @@
   <body>
     <nav>
       <a class="brand" href="index.html">JapaneseTourist</a>
-      <a class="btn1" href="food.html" id="foodRcm">Food Recommendations</a>
-      <a class="btn1" href="currency.html" id="currencyBtn"
+      <a class="btn1" href="food.html" id="foodRcm" data-translate="foodRcm"
+        >Food Recommendations</a
+      >
+      <a
+        class="btn1"
+        href="currency.html"
+        id="currencyBtn"
+        data-translate="currencyBtn"
         >Currency Converter</a
       >
-      <a class="btn1" href="culture.html" id="cultureBtn">Japanese Culture</a>
-      <a class="btn1" href="weather.html" id="weatherBtn">Weather</a>
+      <a
+        class="btn1"
+        href="culture.html"
+        id="cultureBtn"
+        data-translate="cultureBtn"
+        >Japanese Culture</a
+      >
+      <a
+        class="btn1"
+        href="weather.html"
+        id="weatherBtn"
+        data-translate="weatherBtn"
+        >Weather</a
+      >
 
       <label class="language-picker" for="language-select">
         <span class="sr-only">Chọn ngôn ngữ</span>
@@ -109,6 +127,7 @@
 
     <script src="js/config.js"></script>
     <script src="js/currency.js"></script>
+    <script src="js/nav-main.js" defer></script>
     <script>
       // Chatbase integration
       (function () {

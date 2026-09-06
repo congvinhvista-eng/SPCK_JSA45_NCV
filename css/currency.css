@@ -80,7 +80,8 @@
 }
 
 .chart-section {
-  margin-top: 40px;
+  margin-top: 80px;
+  padding-bottom: 40px;
 }
 
 #tradingview_chart {
@@ -92,8 +93,12 @@
 }
 
 .chart-section h2 {
-  margin-bottom: 16px;
-  color: var(--vermillion);
-  font-size: 20px;
+  text-align: center;
+  font-family: "Noto Serif JP", serif;
+  font-size: 2.2rem;
   font-weight: 700;
+  color: var(--vermillion);
+  margin-bottom: 30px;
+  position: relative;
+  letter-spacing: 1px;
 }

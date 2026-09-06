@@ -19,12 +19,30 @@
   <body>
     <nav>
       <a class="brand" href="index.html">JapaneseTourist</a>
-      <a class="btn1" href="food.html" id="foodRcm">Food Recommendations</a>
-      <a class="btn1" href="currency.html" id="currencyBtn"
+      <a class="btn1" href="food.html" id="foodRcm" data-translate="foodRcm"
+        >Food Recommendations</a
+      >
+      <a
+        class="btn1"
+        href="currency.html"
+        id="currencyBtn"
+        data-translate="currencyBtn"
         >Currency Converter</a
       >
-      <a class="btn1" href="culture.html" id="cultureBtn">Japanese Culture</a>
-      <a class="btn1" href="weather.html" id="weatherBtn">Weather</a>
+      <a
+        class="btn1"
+        href="culture.html"
+        id="cultureBtn"
+        data-translate="cultureBtn"
+        >Japanese Culture</a
+      >
+      <a
+        class="btn1"
+        href="weather.html"
+        id="weatherBtn"
+        data-translate="weatherBtn"
+        >Weather</a
+      >
 
       <label class="language-picker" for="language-select">
         <span class="sr-only">Chọn ngôn ngữ</span>
@@ -36,26 +54,30 @@
       </label>
 
       <div class="user-menu">
-        <div class="user" id="currentUser">User</div>
+        <div class="user" id="currentUser" data-translate="currentUser">User</div>
 
-        <button id="logoutBtn" style="display: none">Đăng xuất</button>
+        <button id="logoutBtn" style="display: none" data-translate="logoutBtn">
+          Đăng xuất
+        </button>
       </div>
     </nav>
 
     <!-- FOOD MAP -->
     <section class="food-map">
       <select id="food-select">
-        <option>Tokyo</option>
-        <option>Osaka</option>
-        <option>Kyoto</option>
-        <option>Hokkaido</option>
-        <option>Okinawa</option>
-        <option>Nara</option>
-        <option>Hiroshima</option>
-        <option>Fukuoka</option>
+        <option data-translate="tokyo">Tokyo</option>
+        <option data-translate="osaka">Osaka</option>
+        <option data-translate="kyoto">Kyoto</option>
+        <option data-translate="hokkaido">Hokkaido</option>
+        <option data-translate="okinawa">Okinawa</option>
+        <option data-translate="nara">Nara</option>
+        <option data-translate="hiroshima">Hiroshima</option>
+        <option data-translate="fukuoka">Fukuoka</option>
       </select>
-      <button onclick="searchRestaurants()">find restaurants</button>
-      <div id="load-restaurants">Click the button to see restaurants</div>
+      <button onclick="searchRestaurants()" data-translate="findRes">find restaurants</button>
+      <div id="load-restaurants" data-translate="loadRes">
+        Click the button to see restaurants
+      </div>
     </section>
     <!-- FOOD MAP -->
     <!-- FOOD RECOMMENDATION -->
@@ -64,17 +86,17 @@
         <source src="css/restaurant.mp4" type="video/mp4" />
       </video>
 
-      <span class="food-tag">🍜 Food Recommendation of the Day</span>
+      <span class="food-tag" data-translate="foodTag">🍜 Food Recommendation of the Day</span>
 
-      <h2>Ichiran Ramen</h2>
+      <h2 data-translate="foodTitle">Ichiran Ramen</h2>
 
-      <p>
+      <p data-translate="foodDesc">
         Famous tonkotsu ramen from Tokyo, known for its rich broth, customizable
         flavors and unique private dining booths.
       </p>
 
       <div class="food-meta">
-        <span>📍 Tokyo</span>
+        <span data-translate="tokyo">📍 Tokyo</span>
         <span>⭐ 4.8</span>
         <span>💴 ¥¥</span>
       </div>
@@ -82,7 +104,7 @@
       <button
         onclick="
           window.open('https://maps.app.goo.gl/jn2K7RqenbeHn9Kg6', '_blank')
-        "
+        " data-translate="exploreMore"
       >
         Explore More
       </button>
@@ -108,6 +130,7 @@
     <script src="js/food.js" defer></script>
     <script src="js/nav-main.js" defer></script>
     <script src="js/main.js" defer></script>
+    <script src="js/index.js" defer></script>
     <script>
       // Chatbase integration
       (function () {
