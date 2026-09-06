@@ -1,3 +1,5 @@
+const API_KEY = "16ab116e429215981b0d28e8";
+
 async function convertCurrency() {
   const amount = Number(document.getElementById("amount").value);
   const from = document.getElementById("from").value;
@@ -17,3 +19,5 @@ async function convertCurrency() {
       `${amount} ${from} = ${result.toLocaleString()} ${to}`;
   }
 }
+
+window.convertCurrency = convertCurrency;
