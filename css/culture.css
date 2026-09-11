@@ -1,0 +1,161 @@
+#cultureBtn  {
+  color: var(--vermillion);
+  font-weight: 700;
+  position: relative;
+}
+
+#cultureBtn::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -6px;
+  width: 100%;
+  height: 2px;
+  background: var(--vermillion);
+  transform: translateX(-50%);
+}
+
+
+/*  MAIN SECTION  */
+
+.culture {
+  max-width: 1200px;
+  margin: 120px auto 50px;
+  padding: 0 20px;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 25px;
+    grid-column: 1 / -1; /* chiếm hết các cột */
+  margin-bottom: 20px;
+}
+
+/*  HERO  */
+.culture-opn {
+  grid-column: 1 / -1;
+
+  position: relative;
+  height: 450px; /* thay vì 100vh */
+
+  overflow: hidden;
+
+  display: flex;
+  align-items: flex-end; /* đưa chữ xuống dưới */
+  
+}
+
+.culture-opn video {
+  position: absolute;
+  inset: 0;
+  object-fit: cover;
+  width: 100%;
+    height: 100%;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.4);
+}
+.opn-content {
+  position: relative;
+  z-index: 2;
+
+  color: white;
+
+  padding: 50px;
+  text-align: left;
+
+  max-width: 700px;
+}
+
+.opn-content h1 {
+  font-size: 4rem;
+  margin-bottom: 15px;
+}
+
+.opn-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.culture-opn::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.45);
+
+  z-index: 1;
+}
+/*  FACT CARDS  */
+
+.fact {
+  background: white;
+
+  padding: 30px;
+  border-radius: 20px;
+
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.fact:hover {
+  transform: translateY(-8px);
+
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* thanh đỏ phía trên card */
+
+.fact::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 5px;
+
+  background: var(--vermillion);
+}
+
+/*  TITLES  */
+
+.fact h1 {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+
+  color: var(--vermillion);
+}
+
+/* TEXT */
+
+.fact p {
+  color: #555;
+  line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+  .culture {
+    grid-template-columns: 1fr;
+  }
+
+  .culture-opn {
+    padding: 30px;
+  }
+
+  .culture-opn h1 {
+    font-size: 2.2rem;
+  }
+
+  .fact h1 {
+    font-size: 1.2rem;
+  }
+}

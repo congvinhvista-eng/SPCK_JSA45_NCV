@@ -67,7 +67,10 @@
 
         exploreMore: "Khám Phá Thêm",
 
-        currentUser: "Người dùng"
+        currentUser: "Người dùng",
+        // Currency Converter
+        convertBtn: "Chuyển đổi",
+        conversionResult: "Vui lòng nhập số tiền và chọn loại tiền tệ để chuyển đổi."
   },
     
     ja: {
@@ -137,7 +140,10 @@
 
         exploreMore: "もっと見る",
 
-        currentUser: "ユーザー"
+        currentUser: "ユーザー",
+        // Currency Converter
+        convertBtn: "変換する",
+        conversionResult: "金額を入力し、変換する通貨を選択してください。"
     },
 
     en: {
@@ -207,7 +213,13 @@
 
         exploreMore: "Explore More",
 
-        currentUser: "User"
+        currentUser: "User",
+        logoutBtn: "Logout",
+        // Currency Converter
+        convertBtn: "Convert",
+        conversionResult: "Please enter an amount and select currencies to convert."
+        
+
     }
 }
 

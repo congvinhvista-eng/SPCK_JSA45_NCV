@@ -44,6 +44,14 @@
         >Weather</a
       >
 
+      <a
+        class="btn1"
+        href="recommended.html"
+        id="rcmBtn"
+        data-translate="rcmBtn"
+        >Recommended Tours</a
+      >
+
       <label class="language-picker" for="language-select">
         <span class="sr-only">Chọn ngôn ngữ</span>
         <select id="language-select" aria-label="Chọn ngôn ngữ">
@@ -75,9 +83,9 @@
         <option value="USD">USD</option>
       </select>
 
-      <button onclick="convertCurrency()">Convert</button>
+      <button onclick="convertCurrency()" data-translate="convertBtn">Convert</button>
 
-      <p id="result">
+      <p id="result" data-translate="conversionResult">
         Please enter an amount and select currencies to convert.
       </p>
     </section>
@@ -124,6 +132,7 @@
         </a>
       </div>
     </footer>
+      <script src="js/index.js" defer></script>
         <script src="js/currency.js" defer ></script>
     <script src="js/nav-main.js" defer></script>
     <script>

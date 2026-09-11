@@ -4,6 +4,152 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JapaneseTourist || Japanese Culture</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/culture.css" />
   </head>
-  <body></body>
+  <body>
+    <nav>
+      <a class="brand" href="index.html">JapaneseTourist</a>
+      <a class="btn1" href="food.html" id="foodRcm" data-translate="foodRcm"
+        >Food Recommendations</a
+      >
+      <a
+        class="btn1"
+        href="currency.html"
+        id="currencyBtn"
+        data-translate="currencyBtn"
+        >Currency Converter</a
+      >
+      <a
+        class="btn1"
+        href="culture.html"
+        id="cultureBtn"
+        data-translate="cultureBtn"
+        >Japanese Culture</a
+      >
+      <a
+        class="btn1"
+        href="weather.html"
+        id="weatherBtn"
+        data-translate="weatherBtn"
+        >Weather</a
+      >
+
+      <a
+        class="btn1"
+        href="recommended.html"
+        id="rcmBtn"
+        data-translate="rcmBtn"
+        >Recommended Tours</a
+      >
+
+      <label class="language-picker" for="language-select">
+        <span class="sr-only">Chọn ngôn ngữ</span>
+        <select id="language-select" aria-label="Chọn ngôn ngữ">
+          <option value="vi">VI</option>
+          <option value="ja">JP</option>
+          <option value="en">EN</option>
+        </select>
+      </label>
+
+      <div class="user-menu">
+        <div class="user" id="currentUser">User</div>
+
+        <button id="logoutBtn" style="display: none">Đăng xuất</button>
+      </div>
+    </nav>
+    <div class="culture-opn">
+      <video autoplay muted loop playsinline>
+        <source src="css/culture.mp4" type="video/mp4" />
+      </video>
+      <div class="opn-content">
+        <h1 data-translate="cultureTitle">Japanese Culture</h1>
+        <p data-translate="cultureDescription">
+          Japan is a country with a rich and unique culture that has been shaped
+          by its long history, geography, and religion. From traditional arts
+          like tea ceremony and calligraphy to modern pop culture phenomena like
+          anime and manga, Japan's culture is diverse and fascinating.
+        </p>
+      </div>
+    </div>
+    <section class="culture">
+      <div class="fact">
+        <h1 data-translate="cultureH1">
+          Things You Should Know Before Visiting Japan
+        </h1>
+        <p data-translate="cultureP1">
+          Japan is a beautiful and welcoming country, but it also has many
+          unique customs and rules. Understanding these cultural practices will
+          help you enjoy your trip and show respect to local people.
+        </p>
+      </div>
+      <div class="fact">
+        <h1 data-translate="cultureH2">Queue Properly 🚶</h1>
+        <p data-translate="cultureP2">
+          Japanese people value order and respect for others. Whether you are
+          waiting for a train, buying food, or entering an attraction, always
+          stand in line and wait patiently for your turn.
+        </p>
+      </div>
+      <div class="fact">
+        <h1 data-translate="cultureH2">Be Quiet on Public Transportation 🚆</h1>
+        <p data-translate="cultureP2">
+          Talking loudly on trains and buses is considered impolite. Many
+          passengers use this time to rest, read, or listen to music quietly.
+          Phone calls are usually avoided while riding public transport.
+        </p>
+      </div>
+      <div class="fact">
+        <h1 data-translate="cultureH2">Follow Recycling Rules ♻️</h1>
+        <p data-translate="cultureP2">
+          Japan has strict garbage-sorting rules. Trash bins may be difficult to
+          find in some areas, so visitors often carry their waste until they
+          find the correct disposal location.
+        </p>
+      </div>
+      <div class="fact">
+        <h1 data-translate="cultureH2">Learn Basic Japanese Phrases 🗾</h1>
+        <p data-translate="cultureP2">
+          Even simple phrases such as こんにちは (Konnichiwa – Hello),
+          ありがとう (Arigatou – Thank you), and すみません (Sumimasen – Excuse
+          me) can make interactions more pleasant and show respect for local
+          culture.
+        </p>
+      </div>
+    </section>
+    <script src="js/index.js" defer></script>
+    <script>
+      // Chatbase integration
+      (function () {
+        if (!window.chatbase || window.chatbase("getState") !== "initialized") {
+          window.chatbase = (...args) => {
+            if (!window.chatbase.q) {
+              window.chatbase.q = [];
+            }
+            window.chatbase.q.push(args);
+          };
+          window.chatbase = new Proxy(window.chatbase, {
+            get(target, prop) {
+              if (prop === "q") {
+                return target.q;
+              }
+              return (...args) => target(prop, ...args);
+            },
+          });
+        }
+        const onLoad = function () {
+          const script = document.createElement("script");
+          script.src = "https://www.chatbase.co/embed.min.js";
+          script.id = "hIOf2tFVbfiV8sf3uTkmO";
+          script.domain = "www.chatbase.co";
+          document.body.appendChild(script);
+        };
+        if (document.readyState === "complete") {
+          onLoad();
+        } else {
+          window.addEventListener("load", onLoad);
+        }
+      })();
+    </script>
+  </body>
 </html>
