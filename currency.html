@@ -19,6 +19,14 @@
   <body>
     <nav>
       <a class="brand" href="index.html">JapaneseTourist</a>
+      <a
+        class="btn1"
+        href="recommended.html"
+        id="rcmBtn"
+        data-translate="rcmBtn"
+        >Recommended Tours</a
+      >
+
       <a class="btn1" href="food.html" id="foodRcm" data-translate="foodRcm"
         >Food Recommendations</a
       >
@@ -42,14 +50,6 @@
         id="weatherBtn"
         data-translate="weatherBtn"
         >Weather</a
-      >
-
-      <a
-        class="btn1"
-        href="recommended.html"
-        id="rcmBtn"
-        data-translate="rcmBtn"
-        >Recommended Tours</a
       >
 
       <label class="language-picker" for="language-select">
@@ -83,7 +83,9 @@
         <option value="USD">USD</option>
       </select>
 
-      <button onclick="convertCurrency()" data-translate="convertBtn">Convert</button>
+      <button onclick="convertCurrency()" data-translate="convertBtn">
+        Convert
+      </button>
 
       <p id="result" data-translate="conversionResult">
         Please enter an amount and select currencies to convert.
@@ -132,8 +134,8 @@
         </a>
       </div>
     </footer>
-      <script src="js/index.js" defer></script>
-        <script src="js/currency.js" defer ></script>
+    <script src="js/index.js" defer></script>
+    <script src="js/currency.js" defer></script>
     <script src="js/nav-main.js" defer></script>
     <script>
       // Chatbase integration
