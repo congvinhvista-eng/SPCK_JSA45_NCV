@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JapaneseTourist || Home</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/recommended.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link rel="icon" type="image/x-icon" href="css/icon.png" />
+  </head>
+  <body>
+    <nav>
+      <a class="brand" href="index.html">JapaneseTourist</a>
+      <a
+        class="btn1"
+        href="recommended.html"
+        id="rcmBtn"
+        data-translate="rcmBtn"
+        >Recommended Tours</a
+      >
+
+      <a class="btn1" href="food.html" id="foodRcm" data-translate="foodRcm"
+        >Food Recommendations</a
+      >
+      <a
+        class="btn1"
+        href="currency.html"
+        id="currencyBtn"
+        data-translate="currencyBtn"
+        >Currency Converter</a
+      >
+      <a
+        class="btn1"
+        href="culture.html"
+        id="cultureBtn"
+        data-translate="cultureBtn"
+        >Japanese Culture</a
+      >
+      <a
+        class="btn1"
+        href="weather.html"
+        id="weatherBtn"
+        data-translate="weatherBtn"
+        >Weather</a
+      >
+
+      <label class="language-picker" for="language-select">
+        <span class="sr-only">Chọn ngôn ngữ</span>
+        <select id="language-select" aria-label="Chọn ngôn ngữ">
+          <option value="vi">VI</option>
+          <option value="ja">JP</option>
+          <option value="en">EN</option>
+        </select>
+      </label>
+      <div class="user-menu">
+        <div class="user" id="currentUser" data-translate="currentUser">
+          User
+        </div>
+
+        <button id="logoutBtn" style="display: none" data-translate="logoutBtn">
+          Đăng xuất
+        </button>
+      </div>
+    </nav>
+    <!-- nav ở trên -->
+
+    <section class="tour-selector">
+      <h1 data-translate="tourLength">Select Tour Length</h1>
+
+      <div class="tour-buttons">
+        <button onclick="showTour(3)" data-translate="day3">3 Days</button>
+
+        <button onclick="showTour(5)" data-translate="day5">5 Days</button>
+
+        <button onclick="showTour(7)" data-translate="day7">7 Days</button>
+      </div>
+    </section>
+
+    <section id="interest-section" style="display: none">
+      <h2 data-translate="interestTitle">What are you interested in?</h2>
+
+      <div class="interests">
+        <label>
+          <input type="checkbox" value="anime" />
+          <span data-translate="animeInterest"> Anime & Manga 🎌 </span>
+        </label>
+
+        <label>
+          <input type="checkbox" value="food" />
+          <span data-translate="foodInterest"> Food 🍜 </span>
+        </label>
+
+        <label>
+          <input type="checkbox" value="nature" />
+          <span data-translate="natureInterest"> Nature 🌸 </span>
+        </label>
+
+        <label>
+          <input type="checkbox" value="shopping" />
+          <span data-translate="shoppingInterest"> Shopping 🛍️ </span>
+        </label>
+
+        <label>
+          <input type="checkbox" value="history" />
+          <span data-translate="historyInterest"> History & Temples ⛩️ </span>
+        </label>
+      </div>
+
+      <button onclick="generateTour()" data-translate="generateTour">
+        Generate Tour
+      </button>
+    </section>
+
+    <div id="tour-content">
+      <p data-translate="selectTourLength">Please select a tour length.</p>
+    </div>
+
+    <script src="js/index.js" defer></script>
+    <script src="js/nav-main.js" defer></script>
+    <script src="js/recommended.js" defer></script>
+  </body>
+</html>

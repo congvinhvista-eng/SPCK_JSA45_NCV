@@ -70,8 +70,46 @@
         currentUser: "Người dùng",
         // Currency Converter
         convertBtn: "Chuyển đổi",
-        conversionResult: "Vui lòng nhập số tiền và chọn loại tiền tệ để chuyển đổi."
-  },
+        conversionResult: "Vui lòng nhập số tiền và chọn loại tiền tệ để chuyển đổi.",
+        // culture
+         cultureH1: "Những Điều Bạn Nên Biết Trước Khi Đến Nhật Bản",
+          cultureP1: "Nhật Bản là một đất nước xinh đẹp và thân thiện, nhưng cũng có nhiều phong tục và quy tắc riêng. Hiểu những nét văn hóa này sẽ giúp bạn có chuyến đi thú vị hơn và thể hiện sự tôn trọng với người dân địa phương.",
+
+          cultureH2: "Xếp Hàng Đúng Cách 🚶",
+          cultureP2: "Người Nhật rất coi trọng trật tự và sự tôn trọng người khác. Dù đang chờ tàu, mua đồ ăn hay vào điểm tham quan, hãy luôn xếp hàng và kiên nhẫn chờ đến lượt mình.",
+
+          cultureH3: "Giữ Yên Lặng Trên Phương Tiện Công Cộng 🚆",
+          cultureP3: "Nói chuyện quá lớn trên tàu hoặc xe buýt được xem là thiếu lịch sự. Nhiều hành khách sử dụng thời gian này để nghỉ ngơi hoặc đọc sách.",
+
+          cultureH4: "Tuân Thủ Quy Tắc Phân Loại Rác ♻️",
+          cultureP4: "Nhật Bản có các quy định nghiêm ngặt về phân loại rác. Thùng rác công cộng không phải lúc nào cũng dễ tìm, vì vậy nhiều người mang rác theo cho đến khi tìm được nơi bỏ phù hợp.",
+
+          cultureH5: "Học Một Vài Cụm Từ Tiếng Nhật Cơ Bản 🗾",
+          cultureP5: "Những câu đơn giản như 'Xin chào', 'Cảm ơn' hay 'Xin lỗi' có thể giúp bạn giao tiếp dễ dàng hơn và thể hiện sự tôn trọng với văn hóa địa phương.",
+          cultureTitle: "Văn Hóa Nhật Bản",
+          cultureDescription:
+            "Nhật Bản là một đất nước có nền văn hóa phong phú và độc đáo, được hình thành qua lịch sử lâu đời, vị trí địa lý và các truyền thống đặc sắc. Từ những nghệ thuật truyền thống như trà đạo và thư pháp đến các hiện tượng văn hóa đại chúng hiện đại như anime và manga, văn hóa Nhật Bản luôn đa dạng và hấp dẫn.",
+          rcmBtn: "Tour Đề Xuất",
+          // recommend
+          tourLength: "Chọn số ngày du lịch",
+          day3: "3 Ngày",
+          day5: "5 Ngày",
+          day7: "7 Ngày",
+
+          interestTitle: "Bạn quan tâm đến điều gì?",
+
+          animeInterest: "Anime & Manga 🎌",
+          foodInterest: "Ẩm thực 🍜",
+          natureInterest: "Thiên nhiên 🌸",
+          shoppingInterest: "Mua sắm 🛍️",
+          historyInterest: "Lịch sử & Đền chùa ⛩️",
+
+          generateTour: "Tạo lịch trình",
+
+          selectTourLength: "Vui lòng chọn số ngày du lịch.",
+          // them lich trinh
+          addTo:"thêm vào lịch trình"
+          },
     
     ja: {
         // nav bar
@@ -143,8 +181,46 @@
         currentUser: "ユーザー",
         // Currency Converter
         convertBtn: "変換する",
-        conversionResult: "金額を入力し、変換する通貨を選択してください。"
-    },
+        conversionResult: "金額を入力し、変換する通貨を選択してください。",
+        // culture
+        cultureH1: "日本を訪れる前に知っておきたいこと",
+        cultureP1: "日本は美しく親しみやすい国ですが、独自の習慣やルールもたくさんあります。これらを理解することで、より楽しい旅行ができます。",
+
+        cultureH2: "きちんと並びましょう 🚶",
+        cultureP2: "電車やお店、観光地では順番を守って並びましょう。割り込みは失礼とされています。",
+
+        cultureH3: "公共交通機関では静かにしましょう 🚆",
+        cultureP3: "電車やバスの中で大きな声で話すことはマナー違反とされています。",
+
+        cultureH4: "ごみの分別ルールを守りましょう ♻️",
+        cultureP4: "日本ではごみの分別がとても重要です。正しい場所に捨てるようにしましょう。",
+
+        cultureH5: "簡単な日本語を覚えましょう 🗾",
+        cultureP5: "『こんにちは』『ありがとう』『すみません』などの言葉を使うと、より良い交流ができます。",
+        cultureTitle: "日本文化",
+
+        cultureDescription:
+          "日本は長い歴史や地理、伝統によって育まれた豊かで独特な文化を持つ国です。茶道や書道などの伝統芸術から、アニメやマンガといった現代のポップカルチャーまで、日本文化は多様で魅力にあふれています。",
+        rcmBtn: "おすすめツアー",
+        // recommend
+        tourLength: "旅行日数を選択",
+        day3: "3日間",
+        day5: "5日間",
+        day7: "7日間",
+
+        interestTitle: "興味のあるものを選んでください",
+
+        animeInterest: "アニメ・マンガ 🎌",
+        foodInterest: "グルメ 🍜",
+        natureInterest: "自然 🌸",
+        shoppingInterest: "ショッピング 🛍️",
+        historyInterest: "歴史・寺社 ⛩️",
+
+        generateTour: "ツアーを作成",
+
+        selectTourLength: "旅行日数を選択してください。",
+        addTo:"旅程に追加する"
+        },
 
     en: {
         // nav bar
@@ -217,9 +293,44 @@
         logoutBtn: "Logout",
         // Currency Converter
         convertBtn: "Convert",
-        conversionResult: "Please enter an amount and select currencies to convert."
-        
+        conversionResult: "Please enter an amount and select currencies to convert.",
+        // culture
+        cultureH1: "Things You Should Know Before Visiting Japan",
+        cultureP1: "Japan is a beautiful and welcoming country, but it also has many unique customs and rules. Understanding these cultural practices will help you enjoy your trip and show respect to local people.",
 
+        cultureH2: "Queue Properly 🚶",
+        cultureP2: "Japanese people value order and respect for others. Whether you are waiting for a train, buying food, or entering an attraction, always stand in line and wait patiently for your turn.",
+
+        cultureH3: "Be Quiet on Public Transportation 🚆",
+        cultureP3: "Talking loudly on trains and buses is considered impolite. Many passengers use this time to rest, read, or listen to music quietly. Phone calls are usually avoided while riding public transport.",
+
+        cultureH4: "Follow Recycling Rules ♻️",
+        cultureP4: "Japan has strict garbage-sorting rules. Trash bins may be difficult to find in some areas, so visitors often carry their waste until they find the correct disposal location.",
+
+        cultureH5: "Learn Basic Japanese Phrases 🗾",
+        cultureP5: "Even simple phrases such as こんにちは (Konnichiwa – Hello), ありがとう (Arigatou – Thank you), and すみません (Sumimasen – Excuse me) can make interactions more pleasant and show respect for local culture.",
+        cultureTitle: "Japanese Culture",
+        cultureDescription:
+          "Japan is a country with a rich and unique culture that has been shaped by its long history, geography, and religion. From traditional arts like tea ceremony and calligraphy to modern pop culture phenomena like anime and manga, Japan's culture is diverse and fascinating.",
+         rcmBtn: "Recommended Tours", 
+        //  recommend
+        tourLength: "Select Tour Length",
+        day3: "3 Days",
+        day5: "5 Days",
+        day7: "7 Days",
+
+        interestTitle: "What are you interested in?",
+
+        animeInterest: "Anime & Manga 🎌",
+        foodInterest: "Food 🍜",
+        natureInterest: "Nature 🌸",
+        shoppingInterest: "Shopping 🛍️",
+        historyInterest: "History & Temples ⛩️",
+
+        generateTour: "Generate Tour",
+
+        selectTourLength: "Please select a tour length.",
+        addTo: "Add to Itinerary"
     }
 }
 
@@ -246,6 +357,9 @@ document.getElementById("language-select").addEventListener("change", (e) => {
 
   localStorage.setItem("language", lang);
   changeLanguage(lang);
+    if (typeof updateRecommendedLanguage === "function") {
+    updateRecommendedLanguage();
+  }
 });
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -260,3 +374,22 @@ const savedLanguage = localStorage.getItem("language") || "vi";
   changeLanguage(savedLanguage);
 });
 
+
+
+function changeLanguage(lang) {
+
+  const elements = document.querySelectorAll("[data-translate]");
+
+  elements.forEach(el => {
+
+    const key = el.getAttribute("data-translate");
+
+    if (translations[lang] && translations[lang][key]) {
+      el.textContent = translations[lang][key];
+    }
+
+  });
+  if (typeof updateRecommendedLanguage === "function") {
+  updateRecommendedLanguage();
+}
+}

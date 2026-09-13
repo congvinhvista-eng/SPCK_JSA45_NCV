@@ -1,0 +1,184 @@
+/* Tour Result */
+
+#tour-content {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 25px;
+}
+
+.place-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+
+  transition: all 0.3s ease;
+}
+
+.place-card:hover {
+  transform: translateY(-8px);
+
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.place-card h3 {
+  color: var(--vermillion);
+  font-size: 1.4rem;
+  padding: 20px 20px 10px;
+}
+
+.place-card p {
+  padding: 0 20px;
+  line-height: 1.8;
+  color: #555;
+}
+
+.map-btn {
+  display: inline-block;
+
+  margin: 20px;
+
+  padding: 12px 18px;
+
+  border-radius: 10px;
+
+  background: var(--vermillion);
+
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+
+  transition: 0.3s;
+}
+
+.map-btn:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
+}
+
+/* Tour selector */
+
+.tour-selector {
+  text-align: center;
+  padding: 60px 20px 30px;
+}
+
+.tour-selector h1 {
+  color: white;
+  font-size: 3rem;
+  margin-bottom: 25px;
+}
+
+.tour-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.tour-buttons button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 12px;
+  background: var(--vermillion);
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.tour-buttons button:hover {
+  transform: translateY(-3px);
+}
+
+/* Interest section */
+
+#interest-section {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px;
+  background: rgba(255,255,255,0.95);
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,.1);
+}
+
+#interest-section h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: var(--vermillion);
+}
+
+.interests {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+  gap: 15px;
+}
+
+.interests label {
+  padding: 15px;
+  background: #f5f5f5;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+#interest-section button {
+  display: block;
+  margin: 25px auto 0;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 12px;
+  background: var(--vermillion);
+  color: white;
+  cursor: pointer;
+}
+
+#tour-content {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+#tour-content > p {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #666;
+  padding: 30px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+#interest-section {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 30px;
+
+  background: white;
+  border-radius: 20px;
+
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+#tour-content h2 {
+  text-align: center;
+  color: var(--vermillion);
+  font-size: 2rem;
+  margin-bottom: 25px;
+}
+
+.itinerary-btn{
+  display:block;
+  margin:10px 20px 20px;
+  padding:12px 18px;
+  border:none;
+  border-radius:10px;
+  cursor:pointer;
+  font-weight:600;
+}
+
+.itinerary-btn:hover{
+  transform:scale(1.05);
+}
