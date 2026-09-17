@@ -1,0 +1,80 @@
+/* Tiêu đề */
+h1 {
+  text-align: center;
+  margin: 100px 0 30px;
+  font-size: 2.5rem;
+  color: var(--vermillion);
+  font-family: "Noto Serif JP", serif;
+}
+
+/* Container */
+#itinerary-list {
+  max-width: 1000px;
+  margin: 0 auto 50px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+/* Card địa điểm */
+.place-card {
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease;
+  border-top: 5px solid var(--vermillion);
+}
+
+.place-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.place-card h3 {
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+  color: #333;
+}
+
+/* Nút xoá */
+.place-card button {
+  background: var(--vermillion);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: 0.3s;
+}
+
+.place-card button:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
+}
+
+/* Thông báo trống */
+#itinerary-list p {
+  text-align: center;
+  grid-column: 1 / -1;
+  font-size: 1.2rem;
+  color: #666;
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+    margin-top: 90px;
+  }
+
+  #itinerary-list {
+    padding: 15px;
+  }
+}

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JapaneseTourist || Home</title>
+    <title>JapaneseTourist || Recommended Tours</title>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/recommended.css" />
     <link
@@ -19,6 +19,15 @@
   <body>
     <nav>
       <a class="brand" href="index.html">JapaneseTourist</a>
+
+      <a
+        class="btn1"
+        href="itinerary.html"
+        id="itiBtn"
+        data-translate="itinerary"
+        >Itinerary Tour</a
+      >
+
       <a
         class="btn1"
         href="recommended.html"
@@ -123,8 +132,59 @@
       <p data-translate="selectTourLength">Please select a tour length.</p>
     </div>
 
+    <footer class="footer">
+      <p>&copy; 2023 JapaneseTourist. All rights reserved.</p>
+      <div class="footer-icons">
+        <!-- Facebook -->
+        <a href="https://www.facebook.com/vinh.nguyen.337736/" target="_blank">
+          <i class="fa-brands fa-facebook"></i>
+        </a>
+        <!-- TikTok -->
+        <a href="https://www.tiktok.com/@lowkey.boy607" target="_blank">
+          <i class="fa-brands fa-tiktok"></i>
+        </a>
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/nguyenvinh.pb" target="_blank">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+      </div>
+    </footer>
+    <script src="js/places.js"></script>
     <script src="js/index.js" defer></script>
     <script src="js/nav-main.js" defer></script>
     <script src="js/recommended.js" defer></script>
+    <script>
+      // Chatbase integration
+      (function () {
+        if (!window.chatbase || window.chatbase("getState") !== "initialized") {
+          window.chatbase = (...args) => {
+            if (!window.chatbase.q) {
+              window.chatbase.q = [];
+            }
+            window.chatbase.q.push(args);
+          };
+          window.chatbase = new Proxy(window.chatbase, {
+            get(target, prop) {
+              if (prop === "q") {
+                return target.q;
+              }
+              return (...args) => target(prop, ...args);
+            },
+          });
+        }
+        const onLoad = function () {
+          const script = document.createElement("script");
+          script.src = "https://www.chatbase.co/embed.min.js";
+          script.id = "hIOf2tFVbfiV8sf3uTkmO";
+          script.domain = "www.chatbase.co";
+          document.body.appendChild(script);
+        };
+        if (document.readyState === "complete") {
+          onLoad();
+        } else {
+          window.addEventListener("load", onLoad);
+        }
+      })();
+    </script>
   </body>
 </html>

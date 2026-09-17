@@ -108,7 +108,9 @@
 
           selectTourLength: "Vui lòng chọn số ngày du lịch.",
           // them lich trinh
-          addTo:"thêm vào lịch trình"
+          addTo:"thêm vào lịch trình",
+          // intenerary
+          itinerary: "Lịch Trình Du Lịch"
           },
     
     ja: {
@@ -219,7 +221,8 @@
         generateTour: "ツアーを作成",
 
         selectTourLength: "旅行日数を選択してください。",
-        addTo:"旅程に追加する"
+        addTo:"旅程に追加する",
+        itinerary: "旅行プラン"
         },
 
     en: {
@@ -330,7 +333,9 @@
         generateTour: "Generate Tour",
 
         selectTourLength: "Please select a tour length.",
-        addTo: "Add to Itinerary"
+        addTo: "Add to Itinerary",
+        // itinerary
+        itinerary: "Itinerary Tour"
     }
 }
 
@@ -351,15 +356,16 @@ function changeLanguage(lang) {
     }
   });
 }
-// Lắng nghe khi người dùng thay đổi ngôn ngữ
 document.getElementById("language-select").addEventListener("change", (e) => {
+
   const lang = e.target.value;
 
   localStorage.setItem("language", lang);
+
   changeLanguage(lang);
-    if (typeof updateRecommendedLanguage === "function") {
-    updateRecommendedLanguage();
-  }
+
+  location.reload();
+
 });
 
 document.addEventListener("DOMContentLoaded", () => {

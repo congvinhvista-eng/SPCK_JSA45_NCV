@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JapaneseTourist || Recommended Tours</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/itinerary.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link rel="icon" type="image/x-icon" href="css/icon.png" />
+  </head>
+  <body>
+    <nav>
+      <a class="brand" href="index.html">JapaneseTourist</a>
+
+      <a
+        class="btn1"
+        href="itinerary.html"
+        id="itiBtn"
+        data-translate="itinerary"
+        >Itinerary Tour</a
+      >
+
+      <a
+        class="btn1"
+        href="recommended.html"
+        id="rcmBtn"
+        data-translate="rcmBtn"
+        >Recommended Tours</a
+      >
+
+      <a class="btn1" href="food.html" id="foodRcm" data-translate="foodRcm"
+        >Food Recommendations</a
+      >
+      <a
+        class="btn1"
+        href="currency.html"
+        id="currencyBtn"
+        data-translate="currencyBtn"
+        >Currency Converter</a
+      >
+      <a
+        class="btn1"
+        href="culture.html"
+        id="cultureBtn"
+        data-translate="cultureBtn"
+        >Japanese Culture</a
+      >
+      <a
+        class="btn1"
+        href="weather.html"
+        id="weatherBtn"
+        data-translate="weatherBtn"
+        >Weather</a
+      >
+
+      <label class="language-picker" for="language-select">
+        <span class="sr-only">Chọn ngôn ngữ</span>
+        <select id="language-select" aria-label="Chọn ngôn ngữ">
+          <option value="vi">VI</option>
+          <option value="ja">JP</option>
+          <option value="en">EN</option>
+        </select>
+      </label>
+      <div class="user-menu">
+        <div class="user" id="currentUser" data-translate="currentUser">
+          User
+        </div>
+
+        <button id="logoutBtn" style="display: none" data-translate="logoutBtn">
+          Đăng xuất
+        </button>
+      </div>
+    </nav>
+    <!-- nav ở trên -->
+    <h1>My Itinerary</h1>
+    <div id="itinerary-list"></div>
+    <script src="js/places.js"></script>
+    <script src="js/index.js" defer></script>
+    <script src="js/nav-main.js" defer></script>
+    <script src="js/itinerary.js" defer></script>
+  </body>
+</html>
