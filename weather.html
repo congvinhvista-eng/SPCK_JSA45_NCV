@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JapaneseTourist || Recommended Tours</title>
+    <title>JapaneseTourist || Home</title>
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/itinerary.css" />
+    <link rel="stylesheet" href="css/weather.css" />
     <link
       rel="stylesheet"
       href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
@@ -79,10 +79,35 @@
         </button>
       </div>
     </nav>
-    <!-- nav ở trên -->
-    <h1>My Itinerary</h1>
-    <div id="itinerary-list"></div>
 
+    <!-- hero -->
+    <section class="weather-hero">
+      <video autoplay muted loop playsinline>
+        <source src="css/weather.mp4" type="video/mp4" />
+      </video>
+
+      <div class="weather-overlay">
+        <h1 data-translate="weatherTitle">Weather in Japan</h1>
+
+        <p data-translate="weatherDesc">
+          Check weather forecasts before your trip.
+        </p>
+      </div>
+    </section>
+    <!-- container -->
+    <section class="weather-container">
+      <h1 data-translate="weatherTitle">Weather in Japan</h1>
+
+      <select id="citySelect">
+        <option value="Tokyo">Tokyo</option>
+        <option value="Osaka">Osaka</option>
+        <option value="Kyoto">Kyoto</option>
+        <option value="Hokkaido">Sapporo</option>
+        <option value="Okinawa">Naha</option>
+      </select>
+
+      <div id="weather-card"></div>
+    </section>
     <footer class="footer">
       <p>&copy; 2023 JapaneseTourist. All rights reserved.</p>
       <div class="footer-icons">
@@ -100,76 +125,7 @@
         </a>
       </div>
     </footer>
-
-    <script src="js/places.js"></script>
-    <script src="js/index.js" defer></script>
-    <script src="js/nav-main.js" defer></script>
-    <script src="js/itinerary.js" defer></script>
-    <script>
-      // Chatbase integration
-      (function () {
-        if (!window.chatbase || window.chatbase("getState") !== "initialized") {
-          window.chatbase = (...args) => {
-            if (!window.chatbase.q) {
-              window.chatbase.q = [];
-            }
-            window.chatbase.q.push(args);
-          };
-          window.chatbase = new Proxy(window.chatbase, {
-            get(target, prop) {
-              if (prop === "q") {
-                return target.q;
-              }
-              return (...args) => target(prop, ...args);
-            },
-          });
-        }
-        const onLoad = function () {
-          const script = document.createElement("script");
-          script.src = "https://www.chatbase.co/embed.min.js";
-          script.id = "hIOf2tFVbfiV8sf3uTkmO";
-          script.domain = "www.chatbase.co";
-          document.body.appendChild(script);
-        };
-        if (document.readyState === "complete") {
-          onLoad();
-        } else {
-          window.addEventListener("load", onLoad);
-        }
-      })();
-    </script>
-    <script>
-      // Chatbase integration
-      (function () {
-        if (!window.chatbase || window.chatbase("getState") !== "initialized") {
-          window.chatbase = (...args) => {
-            if (!window.chatbase.q) {
-              window.chatbase.q = [];
-            }
-            window.chatbase.q.push(args);
-          };
-          window.chatbase = new Proxy(window.chatbase, {
-            get(target, prop) {
-              if (prop === "q") {
-                return target.q;
-              }
-              return (...args) => target(prop, ...args);
-            },
-          });
-        }
-        const onLoad = function () {
-          const script = document.createElement("script");
-          script.src = "https://www.chatbase.co/embed.min.js";
-          script.id = "hIOf2tFVbfiV8sf3uTkmO";
-          script.domain = "www.chatbase.co";
-          document.body.appendChild(script);
-        };
-        if (document.readyState === "complete") {
-          onLoad();
-        } else {
-          window.addEventListener("load", onLoad);
-        }
-      })();
-    </script>
+    <script src="js/nav-main.js"></script>
+    <script src="js/weather.js"></script>
   </body>
 </html>
