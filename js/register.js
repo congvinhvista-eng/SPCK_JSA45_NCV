@@ -13,7 +13,7 @@
         const username = usernameInput.value.trim();
         const password = passwordInput.value.trim();
 
-        // --- BƯỚC VALIDATE (KIỂM TRA DỮ LIỆU) ---
+        //KIỂM TRA DỮ LIỆU
         
         // Kiểm tra xem có ô nào bị bỏ trống không
         if (username === "" || password === "") {
@@ -54,7 +54,6 @@
             // Thông báo thành công
             alert("Đăng ký tài khoản thành công!");
 
-            // --- BƯỚC SAU KHI THÀNH CÔNG ---
             
             // 1. Xóa sạch dữ liệu trên form
             registerForm.reset();
