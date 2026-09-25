@@ -67,7 +67,7 @@
 
         exploreMore: "Khám Phá Thêm",
 
-        currentUser: "Người dùng",
+        currentUser: "Đăng Nh",
         // Currency Converter
         convertBtn: "Chuyển đổi",
         conversionResult: "Vui lòng nhập số tiền và chọn loại tiền tệ để chuyển đổi.",
@@ -374,28 +374,25 @@ document.addEventListener("DOMContentLoaded", () => {
     changeLanguage(savedLanguage);
 });
 
-
-document.addEventListener("DOMContentLoaded", () => {
-const savedLanguage = localStorage.getItem("language") || "vi";
-  changeLanguage(savedLanguage);
-});
-
-
-
 function changeLanguage(lang) {
+  const savedUser = JSON.parse(localStorage.getItem("currentUser"));
 
   const elements = document.querySelectorAll("[data-translate]");
 
   elements.forEach(el => {
+
+    if (el.id === "currentUser" && savedUser?.username) {
+      return;
+    }
 
     const key = el.getAttribute("data-translate");
 
     if (translations[lang] && translations[lang][key]) {
       el.textContent = translations[lang][key];
     }
-
   });
+
   if (typeof updateRecommendedLanguage === "function") {
-  updateRecommendedLanguage();
-}
+    updateRecommendedLanguage();
+  }
 }
